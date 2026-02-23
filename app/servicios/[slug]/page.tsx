@@ -5,10 +5,13 @@ import { services } from '@/lib/services-data';
 import CTABanner from '@/components/CTABanner';
 import { CheckCircle, ArrowLeft } from 'lucide-react';
 
-interface Props { params: { slug: string }; }
+interface Props {
+  params: Promise<{ slug: string }>;
+}
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const service = services.find((s) => s.slug === params.slug);
+  const { slug } = await params;
+  const service = services.find((s) => s.slug === slug);
   if (!service) return { title: 'Servicio | Kineo-UMF' };
   return { title: `${service.title} | Kineo-UMF`, description: service.description };
 }
@@ -17,8 +20,9 @@ export function generateStaticParams() {
   return services.map((s) => ({ slug: s.slug }));
 }
 
-export default function ServiceDetailPage({ params }: Props) {
-  const service = services.find((s) => s.slug === params.slug);
+export default async function ServiceDetailPage({ params }: Props) {
+  const { slug } = await params;
+  const service = services.find((s) => s.slug === slug);
   if (!service) notFound();
   return (
     <>
