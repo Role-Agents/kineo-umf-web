@@ -14,3 +14,4 @@ Centro Médico de Rehabilitación Física Especializada — Next.js 14 website.
 npm install
 npm run dev
 ```
+vercel install
