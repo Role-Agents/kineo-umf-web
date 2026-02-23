@@ -4,8 +4,12 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: '**',
+        hostname: 'kineo-umf.com',
       },
+      {
+        protocol: 'https',
+        hostname: '**',
+      }
     ],
   },
 };

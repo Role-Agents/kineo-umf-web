@@ -1,19 +1,26 @@
-import Hero from '@/components/home/Hero';
-import Stats from '@/components/home/Stats';
-import ServicesPreview from '@/components/home/ServicesPreview';
-import WhyUs from '@/components/home/WhyUs';
-import Testimonials from '@/components/home/Testimonials';
-import CTABanner from '@/components/CTABanner';
+import Image from 'next/image';
 
-export default function HomePage() {
+export default function Home() {
   return (
-    <>
-      <Hero />
-      <Stats />
-      <ServicesPreview />
-      <WhyUs />
-      <Testimonials />
-      <CTABanner />
-    </>
+    <main>
+      <section className="relative h-screen w-full">
+        <Image
+          src="https://kineo-umf.com/wp-content/uploads/2024/04/kineo-0492.jpg"
+          alt="Kineo UMF Hero Image - Clinic interior"
+          fill
+          className="object-cover"
+          priority
+        />
+        <div className="absolute inset-0 flex items-center justify-center z-10">
+          <Image
+            src="https://kineo-umf.com/wp-content/uploads/2023/08/site-logo.png"
+            alt="Kineo UMF Logo"
+            width={300}
+            height={102}
+            priority
+          />
+        </div>
+      </section>
+    </main>
   );
 }
