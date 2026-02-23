@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250" role="img" aria-label="Technology services illustration">
+  <rect width="400" height="250" rx="20" fill="#1A3A5C"/>
+  <circle cx="100" cy="80" r="40" fill="#2E7DAE"/>
+  <rect x="200" y="120" width="80" height="60" rx="10" fill="#00B5AD"/>
+  <circle cx="300" cy="100" r="25" fill="#2E7DAE"/>
+  <path d="M 150 180 Q 200 150 250 180" stroke="#90aca0" stroke-width="6" fill="none" stroke-linecap="round"/>
+</svg>
